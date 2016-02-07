@@ -3,7 +3,6 @@ package main
 import (
 	"code.google.com/p/goprotobuf/proto"
 	"github.com/syndtr/goleveldb/leveldb/journal"
-	"io"
 	"io/ioutil"
 	"log"
 	"os"
@@ -24,10 +23,6 @@ func LoadBackup(backupFilePath string, dst interface{}, onPreload func(dst inter
 	journals := journal.NewReader(f, nil, Strict, true)
 	for {
 		j, err := journals.Next()
-		if err == io.EOF {
-			// log.Fatal(err)
-			break
-		}
 		if err != nil {
 			// log.Fatal(err)
 			break
