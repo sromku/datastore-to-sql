@@ -13,7 +13,11 @@ import (
 var Strict bool = true
 
 // Load the backup into real model
-func LoadBackup(backupFilePath string, dst interface{}, onPreload func(dst interface{}), onResult func(dst interface{})) {
+// backupFilePath - the backup file path
+// dst - the struct model that represents datastore entity and the model you want to load the data of this backup
+// onPreload - callback that will be called before loading each entity
+// onResult - callback that will be called with already loaded entity in the model
+func Load(backupFilePath string, dst interface{}, onPreload func(dst interface{}), onResult func(dst interface{})) {
 	f, err := os.Open(backupFilePath)
 	if err != nil {
 		log.Fatal(err)

@@ -2,11 +2,12 @@ package main
 
 import (
 	"fmt"
+	"github.com/sromku/datastore-to-sql/backup"
 )
 
 func main() {
 
-	Strict = false
+	backup.Strict = false
 
 	backupPaths := []string{
 		"../exported-data/data/datastore_backup_datastore_backup_2016_02_07_Profile/157249940434231075281045461947F/output-0",
@@ -14,7 +15,7 @@ func main() {
 
 	for _, backupPath := range backupPaths {
 
-		LoadBackup(backupPath, &Profile{},
+		backup.Load(backupPath, &Profile{},
 
 			// if you want to prepare something before loading into model
 			func(res interface{}) {
