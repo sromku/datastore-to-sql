@@ -14,7 +14,7 @@ import (
 	"github.com/golang/protobuf/proto"
 
 	"google.golang.org/appengine"
-	pb "github.com/sromku/datastore-to-sql/backup/internal/datastore"
+	pb "github.com/sromku/datastore-to-sql/backup/pb"
 )
 
 func toUnixMicro(t time.Time) int64 {

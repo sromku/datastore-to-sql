@@ -11,7 +11,7 @@ import (
 
 	"github.com/golang/protobuf/proto"
 
-	pb "github.com/sromku/datastore-to-sql/backup/internal/datastore"
+	pb "github.com/sromku/datastore-to-sql/backup/pb"
 )
 
 var (

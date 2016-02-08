@@ -10,7 +10,7 @@ import (
 	"time"
 
 	"google.golang.org/appengine"
-	pb "github.com/sromku/datastore-to-sql/backup/internal/datastore"
+	pb "github.com/sromku/datastore-to-sql/backup/pb"
 )
 
 var (

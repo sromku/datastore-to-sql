@@ -14,7 +14,7 @@ import (
 
 	"github.com/golang/protobuf/proto"
 
-	pb "github.com/sromku/datastore-to-sql/backup/internal/datastore"
+	pb "github.com/sromku/datastore-to-sql/backup/pb"
 )
 
 // Key represents the datastore key for a stored entity, and is immutable.
