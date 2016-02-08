@@ -7,8 +7,6 @@ import (
 
 func main() {
 
-	backup.Strict = false
-
 	backupPaths := []string{
 		"../exported-data/data/datastore_backup_datastore_backup_2016_02_07_Profile/157249940434231075281045461947F/output-0",
 	}

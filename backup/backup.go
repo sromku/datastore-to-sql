@@ -10,8 +10,6 @@ import (
 	ds "./internal/datastore"
 )
 
-var Strict bool = true
-
 // Load the backup into real model
 // backupFilePath - the backup file path
 // dst - the struct model that represents datastore entity and the model you want to load the data of this backup
@@ -24,7 +22,7 @@ func Load(backupFilePath string, dst interface{}, onPreload func(dst interface{}
 	}
 	defer f.Close()
 
-	journals := journal.NewReader(f, nil, Strict, true)
+	journals := journal.NewReader(f, nil, false, true)
 	for {
 		j, err := journals.Next()
 		if err != nil {
