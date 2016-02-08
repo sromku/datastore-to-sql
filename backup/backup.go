@@ -1,4 +1,4 @@
-package main
+package backup
 
 import (
 	"code.google.com/p/goprotobuf/proto"
