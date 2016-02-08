@@ -6,8 +6,8 @@ import (
 	"io/ioutil"
 	"log"
 	"os"
-	"/datastore"
-	ds "/internal/datastore"
+	"./datastore"
+	ds "./internal/datastore"
 )
 
 // Load the backup into real model
