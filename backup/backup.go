@@ -6,8 +6,7 @@ import (
 	"io/ioutil"
 	"log"
 	"os"
-	"./datastore"
-	ds "./internal/datastore"
+	pb "github.com/sromku/datastore-to-sql/backup/pb"
 )
 
 // Load the backup into real model
@@ -34,7 +33,7 @@ func Load(backupFilePath string, dst interface{}, onPreload func(dst interface{}
 			// log.Fatal(err)
 			break
 		}
-		pb := &ds.EntityProto{}
+		pb := &pb.EntityProto{}
 		if err := proto.Unmarshal(b, pb); err != nil {
 			log.Fatal(err)
 			break
@@ -42,7 +41,7 @@ func Load(backupFilePath string, dst interface{}, onPreload func(dst interface{}
 		if onPreload != nil {
 			onPreload(dst)
 		}
-		datastore.LoadEntity(dst, pb)
+		LoadEntity(dst, pb)
 		onResult(dst)
 	}
 }

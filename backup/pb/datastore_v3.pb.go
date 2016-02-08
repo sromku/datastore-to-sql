@@ -48,7 +48,7 @@ It has these top-level messages:
 	BeginTransactionRequest
 	CommitResponse
 */
-package datastore
+package pb
 
 import proto "github.com/golang/protobuf/proto"
 import fmt "fmt"

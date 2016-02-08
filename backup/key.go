@@ -2,7 +2,7 @@
 // Use of this source code is governed by the Apache 2.0
 // license that can be found in the LICENSE file.
 
-package datastore
+package backup
 
 import (
 	"bytes"
@@ -14,7 +14,7 @@ import (
 
 	"github.com/golang/protobuf/proto"
 
-	pb "../internal/datastore"
+	pb "github.com/sromku/datastore-to-sql/backup/internal/datastore"
 )
 
 // Key represents the datastore key for a stored entity, and is immutable.
