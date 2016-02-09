@@ -1,7 +1,7 @@
 package backup
 
 import (
-	"code.google.com/p/goprotobuf/proto"
+	"github.com/golang/protobuf/proto"
 	"github.com/syndtr/goleveldb/leveldb/journal"
 	"io/ioutil"
 	"log"
